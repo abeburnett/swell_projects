@@ -1,0 +1,29 @@
+.span4.offset4
+	.padded
+		.login.box{ style: "margin-top: 80px;" }
+
+			-#.box-header
+				%span.title
+					Sign In
+
+
+			.box-content.padded
+				= form_for resource, as: resource_name, url: session_path( resource_name ), html: { class: 'separate-sections' } do |f|
+					.input-prepend
+						%span.add-on
+							%i.icon-user
+						= f.text_field :login, autofocus: true, placeholder: "username"
+
+					.input-prepend
+						%span.add-on
+							%i.icon-key
+						= f.password_field :password, placeholder: "password" 
+
+					= f.submit "Sign in", class: 'btn btn-blue btn-block'
+
+
+				.padded
+					Dont have an account?
+					%a{ href: register_path }
+						%strong
+							Sign Up

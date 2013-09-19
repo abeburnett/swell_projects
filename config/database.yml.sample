@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: swell_projects_dev
+  host: localhost
+  pool: 5
+  username: postgres
+  password: your_pass
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: swell_projects_test
+  host: localhost
+  pool: 5
+  username: postgres
+  password: your_pass

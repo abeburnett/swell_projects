@@ -1,0 +1,12 @@
+
+%h1
+	Howdy
+
+
+- if signed_in?
+	Hi there
+	= current_user.name
+	%p
+	= link_to "Logout", logout_path
+- else
+	= link_to "Login", login_path

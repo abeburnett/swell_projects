@@ -1,0 +1,9 @@
+- unless flash.nil? || flash.empty?
+	.container-fluid
+		.row-fluid
+			- flash.each do |key, value|
+				- next if value.blank?
+				.alert{ class: "alert-#{key}" }
+					%button.close{ type: "button", 'data-dismiss' => "alert" }
+						×
+					= raw value
